@@ -1,56 +1,56 @@
-# Nama Larjug
+# NamaBot
 
-A Discord bot that learns to mimic a specific person's communication style from iMessage and Discord chat history.
+A Discord bot that learns to mimic *ficticious Brooklyn autistic man*—the guy who won’t shut up about obscure glitch techno and that one “life-changing” trip to Germany—from his iMessage and Discord diatribes.
 
 ## Overview
 
-PersonaBot analyzes conversation data from iMessage and Discord to build a language model that generates messages in the style of a specific person. This project uses natural language processing techniques ranging from simple Markov chains to fine-tuned language models.
+NamaBot combs through Chaty Snob’s iMessage and Discord logs to build a language model that captures his “you wouldn’t get this microgenre” swagger. It’s got basic Markov chains (for that jerky, lo-fi feel) and fine-tuned LLMs (for when you want it to lecture you on Berlin’s superiority for hours).
 
 ## Features
 
-- Extract conversation data from iMessage database
-- Extract conversation data from Discord channels
-- Process and clean message data
-- Train language models on the conversation corpus
-- Deploy a Discord bot that responds in the learned communication style
-- Support for both basic (Markov chain) and advanced (fine-tuned LLM) approaches
+- Extracts iMessage rants about “plebs who don’t get minimal techno”
+- Scrapes Discord sermons on that one night at Berghain in 2019
+- Cleans up his nonstop snobbery (good luck with that)
+- Trains a model to churn out messages that ooze niche elitism
+- Deploys a Discord bot that’s part rare-Vinyl nerd, part Berlin evangelist
+- Pick your flavor: Markov (clunky like a bad remix) or LLM (smug like he is)
 
 ## Prerequisites
 
-- Python 3.8+
-- Discord account with developer access
-- Access to iMessage chat.db (macOS)
-- Discord API token
-- Direct message history with the person you want to mimic
+- Python 3.8+ (he’d scoff at anything less “cutting-edge”)
+- Discord dev account (too mainstream for him to bother with)
+- iMessage chat.db (macOS—where he types “Berlin > your life”)
+- Discord API token (he’d lose it critiquing your playlist)
+- Chat logs of him flexing his niche cred
 
 ### Dependencies
 
 ```
-discord.py>=2.0.0
-pandas>=1.0.0
-sqlite3
-markovify>=0.9.0
-transformers>=4.18.0 (for LLM approach)
-python-dotenv>=0.19.0
+discord.py>=2.0.0  # For bot antics
+pandas>=1.0.0      # To sort his pretentious data
+sqlite3            # For iMessage’s retro charm
+markovify>=0.9.0   # Stilted like his obscure beats
+transformers>=4.18.0  # For that “I’m above you” tone
+python-dotenv>=0.19.0  # To hide keys he’d scoff at hiding
 ```
 
 ## Installation
 
-1. Clone this repository:
+1. Clone this thing (he’d call git “too corporate”):
 
 ```bash
-git clone https://github.com/yourusername/personabot.git
-cd /Users/patrick/code/personabot
+git clone https://github.com/yourusername/NamaBot.git
+cd /Users/patrick/code/NamaBot
 ```
 
-2. Create and activate a virtual environment:
+2. Set up a virtual environment (he’d say it’s “not authentic”):
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 ```
 
-3. Install the required packages:
+3. Install the stuff (faster than his Berlin story):
 
 ```bash
 pip install -r requirements.txt
@@ -58,28 +58,28 @@ pip install -r requirements.txt
 
 ## Configuration
 
-1. Create a `.env` file in the project root with your Discord token:
+1. Add a `.env` file with your Discord token (he’d judge your security):
 
 ```
 DISCORD_TOKEN=your_discord_bot_token
 ```
 
-2. Configure extraction parameters in `config.py`:
+2. Tweak `config.py` to track Berlin Beat Snob:
 
 ```python
-# Target contact information
-TARGET_CONTACT = "+1234567890"  # Phone number for iMessage
-TARGET_DISCORD_USER_ID = "123456789012345678"  # Discord user ID
+# Target info
+TARGET_CONTACT = "+1234567890"  # His phone, still buzzing from Berlin flashbacks
+TARGET_DISCORD_USER_ID = "123456789012345678"  # His ID, king of #niche-beats
 
 # Paths
 IMESSAGE_DB_PATH = "/Users/patrick/Library/Messages/chat.db"
-OUTPUT_DIR = "/Users/patrick/code/personabot/data"
-MODEL_PATH = "/Users/patrick/code/personabot/model.json"
+OUTPUT_DIR = "/Users/patrick/code/NamaBot/data"
+MODEL_PATH = "/Users/patrick/code/NamaBot/model.json"
 ```
 
 ## Usage
 
-### Step 1: Extract Data
+### Step 1: Extract the Elitism
 
 #### From iMessage:
 
@@ -93,80 +93,86 @@ python extract_imessage.py
 python extract_discord.py
 ```
 
-### Step 2: Process Data and Train Model
+Brace for “Berlin’s underground scene changed me” on repeat.
+
+### Step 2: Process and Train
 
 ```bash
 python train_model.py
 ```
 
-### Step 3: Run the Bot
+Turns his snobbery into a bot that name-drops Aphex Twin nonstop.
+
+### Step 3: Unleash the Snob
 
 ```bash
 python bot.py
 ```
 
+Watch it gatekeep your server with rare B-sides and Berlin lore.
+
 ## Project Structure
 
 ```
-/Users/patrick/code/personabot/
-├── .env                  # Environment variables (Discord token)
-├── config.py             # Configuration settings
-├── requirements.txt      # Project dependencies
-├── README.md             # This file
-├── extract_imessage.py   # Script to extract iMessage data
-├── extract_discord.py    # Script to extract Discord data
-├── process_data.py       # Data cleaning and processing
-├── train_model.py        # Model training (Markov or LLM)
-├── bot.py                # Discord bot implementation
-├── data/                 # Directory for storing extracted messages
-│   ├── imessage_data.csv
-│   └── discord_data.csv
-└── models/               # Directory for trained models
-    ├── markov_model.json
-    └── llm_model/        # For the fine-tuned LLM approach
+/Users/patrick/code/NamaBot/
+├── .env                  # Secrets he’d deem “too mainstream”
+├── config.py             # Settings he’d call “basic”
+├── requirements.txt      # Tools he’d sneer at
+├── README.md             # This file he’d skim for “Berlin”
+├── extract_imessage.py   # His iPhone techno manifestos
+├── extract_discord.py    # His Discord niche flexes
+├── process_data.py       # Filtering his endless takes
+├── train_model.py        # Building his smug avatar
+├── bot.py                # The snobbery lives
+├── data/                 # His essence in CSV
+│   ├── imessage_data.csv  # “You wouldn’t get this track”
+│   └── discord_data.csv   # 6000 words on Berlin’s grit
+└── models/               # His brain, preserved
+    ├── markov_model.json  # Choppy like his rare cuts
+    └── llm_model/         # Polished like his ego
 ```
 
 ## Advanced Usage
 
-### Fine-tuning a Language Model
+### Fine-tuning the Pretension
 
-For more realistic and contextual responses, you can fine-tune a pre-trained language model instead of using Markov chains:
+For peak “you’ve never heard of this label” vibes, fine-tune an LLM:
 
 ```bash
 python train_llm.py
 ```
 
-This will create a fine-tuned model in the `models/llm_model/` directory.
+Dumps a model in `models/llm_model/`.
 
-### Using the Fine-tuned Model
+### Switching to Elite Mode
 
-Update your bot configuration to use the fine-tuned model:
+Make the bot as insufferable as he is:
 
 ```python
 # In bot.py
-USE_LLM = True  # Set to False to use Markov chain instead
+USE_LLM = True  # False for that “glitchy demo” Markov vibe
 ```
 
 ## Troubleshooting
 
-### Common Issues
+### Common Snags
 
-#### Cannot access iMessage database
+#### iMessage Blocks You
 ```
 Error: unable to open database file
 ```
-Solution: Ensure Terminal has Full Disk Access in System Preferences → Privacy & Security.
+Fix: Give Terminal Full Disk Access. He’d blame “uncultured tech.”
 
-#### Discord API rate limiting
+#### Discord Says “Enough”
 ```
 discord.errors.HTTPException: 429 Too Many Requests
 ```
-Solution: Implement rate limiting in your bot code or reduce frequency of requests.
+Fix: Ease up—he’d say the API “can’t handle true art.”
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License—open like his Berlin tales, but less tedious. See LICENSE.
 
 ## Disclaimer
 
-This tool is for educational and personal use only. The creators are not responsible for any misuse or violation of Discord's Terms of Service or any applicable laws regarding privacy and impersonation.
+This is _entirely ficticious_ and **definitely** not based on a real person in ravesNYC.
